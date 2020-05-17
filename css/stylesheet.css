@@ -31,8 +31,8 @@ a:hover {
 	opacity: 0.9;
 	width: calc(50vw - 10px);
 	height: calc(50vh - 10px);
-	margin-left: 25vw;
-	margin-right: 25vw;
+	margin-left: auto;
+	margin-right: auto;
 	margin-top: 25vh;
 	margin-bottom: 25vh;
 	padding: 5px;
