@@ -1,6 +1,6 @@
 var times = document.getElementsByClassName("time");
 var dates = document.getElementsByClassName("date");
-var date = new Date();
+var d = new Date();
 
 var month = new Array(12);
 month[0] = "Jan";
@@ -16,10 +16,14 @@ month[9] = "Oct";
 month[10] = "Nov";
 month[11] = "Dec";
 
-for(var n = 0; n < times.length; n++) {
-	times[n].innerHTML = date.getHours() + ":" + date.getMinutes();
-}
+
+var timestr = ("0"+d.getHours()).slice(-2) + ":" + ("0"+d.getMinutes()).slice(-2);
+var datestr =("0"+d.getDate()).slice(-2) + "-" + month[d.getMonth()] + "-" + ("0"+(d.getYear() % 100)).slice(-2);
 
 for(var n = 0; n < times.length; n++) {
-	dates[n].innerHTML = date.getDate() + "-" + month[date.getMonth()] + "-" + (date.getYear() % 100);
+	times[n].innerHTML = timestr;
+}
+
+for(var n = 0; n < dates.length; n++) {
+	dates[n].innerHTML = datestr;
 }
